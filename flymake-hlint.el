@@ -17,7 +17,7 @@
 (require 'flymake-easy)
 
 (defconst flymake-hlint-err-line-patterns
-  '(("^\\(.*\.hs\\):\\([0-9]+\\):\\([0-9]+\\): \\(.*\\)$" 1 2 3 4)))
+  '(("^\\(.*\.hs\\):\\([0-9]+\\):\\([0-9]+\\): \\(.*\\(?:\n.+\\)+\\)" 1 2 3 4)))
 
 (defvar flymake-hlint-executable "hlint"
   "The hlint executable to use for syntax checking.")
