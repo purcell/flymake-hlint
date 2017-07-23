@@ -1,11 +1,27 @@
 ;;; flymake-hlint.el --- A flymake handler for haskell-mode files using hlint
-;;
-;;; Author: Steve Purcell <steve@sanityinc.com>
-;;; URL: https://github.com/purcell/flymake-hlint
-;;; Version: DEV
-;;; Package-Requires: ((flymake-easy "0.1"))
-;;;
+
+;; Copyright (c) 2013-2017 Steve Purcell
+
+;; Author: Steve Purcell <steve@sanityinc.com>
+;; URL: https://github.com/purcell/flymake-hlint
+;; Package-Version: 0
+;; Package-Requires: ((flymake-easy "0.1"))
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 ;;; Commentary:
+
 ;; Usage:
 ;;   (require 'flymake-hlint)
 ;;   (add-hook 'haskell-mode-hook 'flymake-hlint-load)
@@ -23,7 +39,7 @@
   "The hlint executable to use for syntax checking.")
 
 (defun flymake-hlint-command (filename)
-  "Construct a command that flymake can use to check hlint source."
+  "Construct a command that flymake can use to check source in FILENAME with hlint."
   (list flymake-hlint-executable filename))
 
 ;;;###autoload
